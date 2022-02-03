@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Window Coordinate</title>
+    <title>Window Coordinates</title>
     <style>
         div {
             background-color: bisque;
@@ -15,9 +15,26 @@
         .click {
             background-color: red;
         }
+        .btn {
+            background-color: transparent;
+            width:auto;
+            height:auto;
+            position: absolute;
+            display: flex;
+            top: 10px;
+            right: 20px;
+        }
+        button {
+            margin: 0 10px;
+        }
     </style>
 </head>
 <body>
+    <div class="btn">
+        <button class="by">Scroll by 100px(y)</button>
+        <button class="to">Scroll to 100px(y)</button>
+        <button class="sp">Scroll into Special</button>
+    </div>
     <div></div>
     <div></div>
     <div></div>
@@ -33,7 +50,20 @@
         let rect = screenLog.getBoundingClientRect();
         screenLog.addEventListener('click', (e) => {
             console.log(rect);
-            console.log(`clientX: ${e.clientX}, clientY: ${e.clientY}`);
+            console.log(`client: ${e.clientX}, clientY: ${e.clientY}`);
+            console.log(`page: ${e.pageX}, clientY: ${e.pageY}`);
+        })
+        let by = document.querySelector('.by');
+        let to = document.querySelector('.to');
+        let sp = document.querySelector('.sp');
+        by.addEventListener('click', (e) => {
+            window.scrollBy(0,100);
+        })
+        to.addEventListener('click', () => {
+            window.scrollTo(0,100);
+        })
+        sp.addEventListener('click', ()=> {
+            window.scrollTo(0, rect.y);
         })
     </script>
 </body>

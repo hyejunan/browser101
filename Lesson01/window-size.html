@@ -11,7 +11,7 @@
             background-color: thistle;
             padding: 16px;
             margin-top: 16px;
-            font-size: 48px;
+            font-size: 36px;
         }
     </style>
 </head>
@@ -20,10 +20,20 @@
         Window Size
     </div>
     <script>
+        const tag = document.querySelector('.tag');
+        function updateTag() {
+            tag.innerHTML = `
+            window.screen: ${window.screen.width}, ${window.screen.height} <br/>
+            window.outer: ${window.outerWidth}, ${window.outerHeight} <br/>
+            window.inner: ${window.innerWidth}, ${window.innerHeight} <br/>
+            documentElement.client: ${document.documentElement.clientWidth}, ${document.documentElement.clientHeight}
+            `
+        }
+        
         window.addEventListener('resize', () => {
-            console.log(`window.screen: ${window.screen.width}, ${window.screen.height}`);
-            console.log(`window.outer: ${window.outerWidth}, ${window.outerHeight}`);
+            updateTag();
         });
+        updateTag();
     </script>
 </body>
 </html>

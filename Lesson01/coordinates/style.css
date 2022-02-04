@@ -1,0 +1,16 @@
+html {
+    height: 100%;
+}
+body {
+    width: 100%;
+    height:100%;
+    background-color: black;
+    cursor: url(img/target.png), auto;
+    color: white;
+}
+
+.coord {
+    position: relative;
+    left: 0px;
+    top: 0px;
+}

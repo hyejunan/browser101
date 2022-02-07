@@ -12,21 +12,26 @@
 </head>
 <body>
    <div id="box">
-       <div class="list-box">
-           <h2 class="title">Shopping List</h2>
-           <h3 class="date">Date</h3>
-           <ul id="list">
-                <li>
-                   <input type="checkbox" id="check">
-                   <label >Go to Gym</label>
-                   <i class="far fa-trash-alt"></i>
-                </li>
-           </ul>
-       </div>
-       <div class="add-box">
-           <input class="input-box" type="text" placeholder="What do you want?">
-           <span class="add-btn">Add</span>
-       </div>
+        <div class="list-box">
+            <h2 class="title">Shopping List</h2>
+            <h3 class="date">Date</h3>
+            <div class="add-box">
+                <input class="input-box" type="text" placeholder="What do you want?">
+                <button class="add-btn">Add</button>
+            </div>
+            <ul id="list">
+                    <li>
+                        <label class="container">
+                            <input type="checkbox" id="check">
+                            Two
+                        </label>
+                        <i class="far fa-trash-alt"></i>
+                    </li>
+            </ul>
+        </div>
+        <div class="sum-box">
+            <span>You have <span>0</span> items to buy</span>
+        </div>
    </div>
 </body>
 </html>

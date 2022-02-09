@@ -48,3 +48,27 @@ surprise(); // error(operator undefined)
 surprise(add); // NaN
 surprise(divide);
 
+// Class
+class Counter {
+    constructor(runEveryFiveTimes) {
+        this.counter = 0;
+        this.callback = runEveryFiveTimes;
+    }
+    increase(runIf5Times) {
+        this.counter++;
+        if(this.counter %5===0) {
+            this.callback && this.callback(this.counter);
+        }
+    }
+}
+
+function printSomething(num) {
+    console.log(`yo! ${num}`);
+}
+const coolCounter = new Counter(printSomething);
+coolCounter.increase(); //1
+coolCounter.increase(); //2
+coolCounter.increase(); //3
+coolCounter.increase(); //4
+coolCounter.increase(); //5
+

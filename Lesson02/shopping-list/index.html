@@ -11,27 +11,52 @@
    <link href="https://fonts.googleapis.com/css2?family=DM+Sans&display=swap" rel="stylesheet">
 </head>
 <body>
-   <div id="box">
-        <div class="list-box">
-            <h2 class="title">Shopping List</h2>
-            <h3 class="date">Date</h3>
-            <div class="add-box">
-                <input class="input-box" type="text" placeholder="What do you want?">
-                <button class="add-btn">Add</button>
-            </div>
-            <ul id="list">
-                    <li>
-                        <label class="container">
-                            <input type="checkbox" id="check">
-                            Two
-                        </label>
+    <section class="list">
+        <header class="header">
+            <div class="header__title">Shopping List</div>
+            <div class="header__date">2022/02/08</div>
+        </header>
+        <ul class="list__lists">
+            <div class="lists__row">
+                <div class="lists__left">
+                    <input type="checkbox" name="check" id="lists__check">
+                    <span class="lists__name">List1</span>
+                </div>
+                <div class="lists__right">
+                    <button class="lists__delete">
                         <i class="far fa-trash-alt"></i>
-                    </li>
-            </ul>
-        </div>
-        <div class="sum-box">
-            <span>You have <span>0</span> items to buy</span>
-        </div>
-   </div>
+                    </button>
+                </div>
+            </div>
+            <div class="lists__row">
+                <div class="lists__left">
+                    <input type="checkbox" name="check" id="lists__check">
+                    <span class="lists__name">List1</span>
+                </div>
+                <div class="lists__right">
+                    <button class="lists__delete">
+                        <i class="far fa-trash-alt"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="lists__row">
+                <div class="lists__left">
+                    <input type="checkbox" name="check" id="lists__check">
+                    <span class="lists__name">List1</span>
+                </div>
+                <div class="lists__right">
+                    <button class="lists__delete">
+                        <i class="far fa-trash-alt"></i>
+                    </button>
+                </div>
+            </div>
+        </ul>
+        <footer class="footer">
+            <input type="text" class="footer__input" placeholder="What do you want?">
+            <button class="footer__add">
+                add
+            </button>
+        </footer>
+    </section>
 </body>
 </html>

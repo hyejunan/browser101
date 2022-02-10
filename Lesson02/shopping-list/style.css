@@ -58,7 +58,7 @@ button {
     font-size: 15px;
 }
 
-input[type="checkbox"]:checked .lists__name{
+.checked {
     color:#888;
     text-decoration: line-through;
     text-decoration-thickness: 2px;

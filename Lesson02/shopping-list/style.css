@@ -50,12 +50,18 @@ button {
     margin-bottom: 10px;
 }
 
-#list__check {
+#lists__check {
     margin: 3px;
 }
 
-.lists__delete {
+.far{
     font-size: 15px;
+    transition: all 300ms ease-in;
+}
+
+.far:hover {
+    color: red;
+    transform:scale(1.1); 
 }
 
 .checked {
@@ -76,6 +82,7 @@ button {
     padding: 1px 3px;
     background-color: lightgray;
     border-radius: 4px;
+    transition: all 300ms ease-in;
 }
 
 .footer__add:hover {

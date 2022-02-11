@@ -23,4 +23,7 @@
     if(event.target !== event.currentTatget)
         return
 
+    event.preventDefault();
+    
+
 */

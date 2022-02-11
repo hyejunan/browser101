@@ -12,4 +12,15 @@
     addEventListener()
     removeEventListner()
     dispatchEvent()
+
+    event Bubbling&Capturing
+    click -> capturing 
+    bubbling up 
+    stopPropagation() => don't use
+    stopImmediatePropagation() => don't use
+
+    To only use meaningful target:
+    if(event.target !== event.currentTatget)
+        return
+
 */

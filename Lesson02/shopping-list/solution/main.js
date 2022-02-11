@@ -1,4 +1,5 @@
 const items = document.querySelector('.items');
+const footer = document.querySelector('footer');
 const input = document.querySelector('.footer__input');
 const addBtn = document.querySelector('.footer__button');
 

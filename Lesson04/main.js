@@ -1,29 +1,32 @@
 let image = document.querySelectorAll('img');
+let btn = document.querySelector('button');
+console.log(image);
 
 function getRandomInt (min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-function randomOrder (animate) {
-  image.each(function(e) {
-    var image = e;
-    
+function randomOrder (img) {
+  img.forEach(e => {
+    let eRect = e.getBoundingClientRect();
     // Viewport Dimensions
-    var vpHeight = $(window).height();
-    var vpWidth = $(window).width();
+    var vpHeight = window.screen.width;
+    var vpWidth = window.screen.height;
     
     // Image Position
-    var xPos = getRandomInt(0, vpWidth - image.width());
-    var yPos = getRandomInt(0, vpHeight - image.height());
-    var zIndex = getRandomInt(0,13);
+    var xPos = getRandomInt(0, vpWidth - eRect.width);
+    var yPos = getRandomInt(0, vpHeight - eRect.height);
     
-    // Animation Duration
-    if(animate) var dur = 500;
-    else var dur = 0;
-    
-    image.animate({left: xPos, top: yPos, 'z-index': zIndex}, dur);
-  });
+    e.style.transform = `translate(${xPos}px, ${yPos}px)`;
+
+  })   
 };
 
 //Setup
-image.randomOrder(true);
+btn.addEventListener('click', () => {
+    randomOrder(image);
+})
+
+window.addEventListener('load', () => {
+    randomOrder(image);
+})

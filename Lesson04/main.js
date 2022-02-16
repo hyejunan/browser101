@@ -2,6 +2,7 @@ let image = document.querySelectorAll('img');
 let bg = document.querySelector('section');
 let btn = document.querySelector('button');
 let carrot = document.querySelectorAll('.carrot');
+let bug = document.querySelectorAll('.bug');
 
 
 function getRandomInt (min, max) {
@@ -31,6 +32,11 @@ carrot.forEach(e => e.addEventListener("click", () => {
     cnt++;
     if(cnt == 10)
         alert("Done!");
+}));
+
+bug.forEach(e => e.addEventListener("click", () => {
+
+    alert("Oops!");
 }));
 
 //Setup

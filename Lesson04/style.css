@@ -3,7 +3,9 @@
     font-family: 'DM Sans', sans-serif;
 }
 
-body {
+section {
+    width: 800px;
+    height: 500px;
     background-image: url(carrot/img/background.png);
     background-repeat: no-repeat;
     background-size: cover;
@@ -16,5 +18,19 @@ body {
 }
 
 img {
+    top:0px;
+    left: 0px;
     position: absolute;
-  }
+}
+
+.carrot {
+    cursor: pointer;
+}
+
+.bug {
+    cursor: pointer;
+}
+
+.clicked {
+    display: none;
+}

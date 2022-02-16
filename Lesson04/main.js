@@ -1,6 +1,8 @@
 let image = document.querySelectorAll('img');
+let bg = document.querySelector('section');
 let btn = document.querySelector('button');
-console.log(image);
+let carrot = document.querySelectorAll('.carrot');
+
 
 function getRandomInt (min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -14,13 +16,22 @@ function randomOrder (img) {
     var vpWidth = window.screen.height;
     
     // Image Position
-    var xPos = getRandomInt(0, vpWidth - eRect.width);
-    var yPos = getRandomInt(0, vpHeight - eRect.height);
+    var xPos = getRandomInt(0, 800);
+    var yPos = getRandomInt(0, 500);
     
     e.style.transform = `translate(${xPos}px, ${yPos}px)`;
 
   })   
 };
+
+let cnt = 0;
+
+carrot.forEach(e => e.addEventListener("click", () => {
+    e.classList.add("clicked");
+    cnt++;
+    if(cnt == 10)
+        alert("Done!");
+}));
 
 //Setup
 btn.addEventListener('click', () => {

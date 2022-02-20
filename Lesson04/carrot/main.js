@@ -98,6 +98,7 @@ function showStopButton() {
     const icon = gameBtn.querySelector('.fas');
     icon.classList.add('fa-stop');
     icon.classList.remove('fa-play');
+    gameBtn.style.visibility = 'visible';
 }
 
 function hideGameButton() {
@@ -179,3 +180,4 @@ function addItem(className, count, imgPath) {
 function randomNumber(min, max) {
     return Math.random() * (max - min) + min;
 }
+

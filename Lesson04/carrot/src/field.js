@@ -11,8 +11,9 @@ export default class Field {
         this.bugCount = bugCount;
         this.field = document.querySelector('.game__field');
         this.fieldRect = this.field.getBoundingClientRect();
-        this.onClick = this.onClick.bind(this);
-        this.field.addEventListener('click', this.onClick);
+        //this.onClick = this.onClick.bind(this);
+        //this.field.addEventListener('click',(event) => this.onClick(event));
+        this.field.addEventListener('click',this.onClick);
     }
 
     init() {
@@ -44,7 +45,7 @@ export default class Field {
         }
     }
 
-    onClick(e) {
+    onClick = e =>  {
         const target = e.target;
         if(target.matches('.carrot')) {
             target.remove();

@@ -9,12 +9,20 @@
 <body>
     <button>Continue with setTimeout</button>
     <script>
+        // function handleClick() {
+        //     console.log('handleClick');
+        //     setTimeout(() => {
+        //         console.log('setTimeout');
+        //         handleClick();
+        //     },0);
+        // }
         function handleClick() {
             console.log('handleClick');
-            setTimeout(() => {
-                console.log('setTimeout');
+            Promise.resolve(0)
+            .then(() => {
+                console.log('then');
                 handleClick();
-            },0);
+            })
         }
         const button = document.querySelector('button');
         button.addEventListener('click', () => {
